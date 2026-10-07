@@ -1,0 +1,1421 @@
+{
+  "protocol": "Custom frozen panorama split; no test selection; 1000 bootstrap replicates over simulated scenes or real panoramas (four crops grouped).",
+  "caveat": "Custom PCD split and resized crops are not comparable to published benchmark scores.",
+  "checkpoints": {
+    "trace": "876e12fcbeeae681ad8a48f79ee8cf9ccdc30877411c51bd0074cbd4a0946707",
+    "raw": "17973b466c9c1d423c2dae43f46b0da9c93b27fd610126d4b7b217358126f2cb",
+    "combined": "5a3320babe5b5644d1e54a8be48e3a0f84e6450832bb3f86b9b3b8f037e4f899"
+  },
+  "pixel_validation_calibration": {
+    "pixel_raw": {
+      "temperature": 7.3890311534850674,
+      "threshold": 0.42499999999999993,
+      "validation": {
+        "f1": 0.2923325611018824,
+        "iou": 0.17118822695975963,
+        "precision": 0.1728081925762704,
+        "recall": 0.9480825075013408,
+        "brier": 0.29410383105278015,
+        "ece": 0.3740694217715254,
+        "false_positive_rate": 0.9196521327042061,
+        "pixels": 1228272,
+        "tp": 196218,
+        "fp": 939249,
+        "fn": 10745,
+        "tn": 82060
+      },
+      "uncalibrated": {
+        "f1": 0.2735134093238827,
+        "iou": 0.15842197141929198,
+        "precision": 0.18456712545355036,
+        "recall": 0.5279349448935317,
+        "brier": 0.3699248731136322,
+        "ece": 0.37807964877846933,
+        "false_positive_rate": 0.4726610653582804,
+        "pixels": 1228272,
+        "tp": 109263,
+        "fp": 482733,
+        "fn": 97700,
+        "tn": 538576
+      }
+    },
+    "pixel_combined": {
+      "temperature": 3.374658548840402,
+      "threshold": 0.39999999999999997,
+      "validation": {
+        "f1": 0.4074928599861644,
+        "iou": 0.25588133939708685,
+        "precision": 0.27781681234366656,
+        "recall": 0.7641945661784957,
+        "brier": 0.20219597220420837,
+        "ece": 0.2581002980139902,
+        "false_positive_rate": 0.40255789384016005,
+        "pixels": 1228272,
+        "tp": 158160,
+        "fp": 411136,
+        "fn": 48803,
+        "tn": 610173
+      },
+      "uncalibrated": {
+        "f1": 0.3505279281119167,
+        "iou": 0.2125091622258761,
+        "precision": 0.3035795774124739,
+        "recall": 0.4146538270125578,
+        "brier": 0.18619857728481293,
+        "ece": 0.13213627019390287,
+        "false_positive_rate": 0.19276144633994216,
+        "pixels": 1228272,
+        "tp": 85818,
+        "fp": 196869,
+        "fn": 121145,
+        "tn": 824440
+      }
+    }
+  },
+  "suites": {
+    "simulation_mixed": {
+      "trace": {
+        "f1": 0.9092520221757703,
+        "iou": 0.8336041328167313,
+        "precision": 0.9277600037093708,
+        "recall": 0.891468032969481,
+        "brier": 0.003820708254352212,
+        "ece": 0.0011605261534571663,
+        "false_positive_rate": 0.0018783689777356611,
+        "pixels": 851888,
+        "tp": 20009,
+        "fp": 1558,
+        "fn": 2436,
+        "tn": 827885,
+        "scenes": 128,
+        "independent_units": 128,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.8905841815398599,
+          0.9242031930896417
+        ],
+        "error_indicator_brier": 0.0038285928312689066,
+        "error_indicator_ece": 0.0002963559814417279,
+        "observed_pixel_error_rate": 0.004688409744003906,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.004688409744003906,
+            "entropy_risk": 0.004688409744003906,
+            "random_expected_risk": 0.004688409744003906
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0007011876365594225,
+            "entropy_risk": 0.0006902315797381815,
+            "random_expected_risk": 0.004688409744003906
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0007864883646676559,
+            "entropy_risk": 0.0008639633379035742,
+            "random_expected_risk": 0.004688409744003906
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.001389854065323141,
+            "entropy_risk": 0.0016058448997990347,
+            "random_expected_risk": 0.004688409744003906
+          }
+        ],
+        "latency_ms_p50_p95": [
+          295.09433350904146,
+          923.9830437494663
+        ]
+      },
+      "raw": {
+        "f1": 0.8052190971509386,
+        "iou": 0.6739470770170682,
+        "precision": 0.8249976628961391,
+        "recall": 0.7863666740922255,
+        "brier": 0.00805855542421341,
+        "ece": 0.004515064545783178,
+        "false_positive_rate": 0.004513872562671576,
+        "pixels": 851888,
+        "tp": 17650,
+        "fp": 3744,
+        "fn": 4795,
+        "tn": 825699,
+        "scenes": 128,
+        "independent_units": 128,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.7767234560423635,
+          0.8298642998533415
+        ],
+        "error_indicator_brier": 0.008099430240690708,
+        "error_indicator_ece": 0.003637576879751842,
+        "observed_pixel_error_rate": 0.010023618128204646,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.010023618128204646,
+            "entropy_risk": 0.010023618128204646,
+            "random_expected_risk": 0.010023618128204646
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0008874406025205191,
+            "entropy_risk": 0.0008874406025205191,
+            "random_expected_risk": 0.010023618128204646
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0007724020058974888,
+            "entropy_risk": 0.0007724020058974888,
+            "random_expected_risk": 0.010023618128204646
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0011316041545367467,
+            "entropy_risk": 0.0011316041545367467,
+            "random_expected_risk": 0.010023618128204646
+          }
+        ],
+        "latency_ms_p50_p95": [
+          151.340728996729,
+          592.3208807012994
+        ]
+      },
+      "combined": {
+        "f1": 0.8919695446056601,
+        "iou": 0.8050045377933359,
+        "precision": 0.964080534133844,
+        "recall": 0.8298952996212965,
+        "brier": 0.0044417912140488625,
+        "ece": 0.0027222685004800826,
+        "false_positive_rate": 0.0008367060786576052,
+        "pixels": 851888,
+        "tp": 18627,
+        "fp": 694,
+        "fn": 3818,
+        "tn": 828749,
+        "scenes": 128,
+        "independent_units": 128,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.8674400577323831,
+          0.9127958033746999
+        ],
+        "error_indicator_brier": 0.004502242896705866,
+        "error_indicator_ece": 0.001965207019765207,
+        "observed_pixel_error_rate": 0.005296470897582781,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.005296470897582781,
+            "entropy_risk": 0.005296470897582781,
+            "random_expected_risk": 0.005296470897582781
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0011253435506388947,
+            "entropy_risk": 0.0011425602113579877,
+            "random_expected_risk": 0.005296470897582781
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0012302086659279155,
+            "entropy_risk": 0.0012395995717746934,
+            "random_expected_risk": 0.005296470897582781
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.001408635877016697,
+            "entropy_risk": 0.001413331329940086,
+            "random_expected_risk": 0.005296470897582781
+          }
+        ],
+        "latency_ms_p50_p95": [
+          140.71187550143804,
+          762.5609626018557
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.057458134706312294,
+        "iou": 0.029578839835004204,
+        "precision": 0.029588179650132565,
+        "recall": 0.9894408554243707,
+        "brier": 0.25917088985443115,
+        "ece": 0.47990093516243987,
+        "false_positive_rate": 0.8781338802063553,
+        "pixels": 851888,
+        "tp": 22208,
+        "fp": 728362,
+        "fn": 237,
+        "tn": 101081,
+        "scenes": 128,
+        "independent_units": 128,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.050252174427129676,
+          0.06476054577427348
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.21460786640933813,
+        "iou": 0.1202020902700703,
+        "precision": 0.1213603282343397,
+        "recall": 0.9264424147917131,
+        "brier": 0.12960857152938843,
+        "ece": 0.3222238716684844,
+        "false_positive_rate": 0.1815037320225742,
+        "pixels": 851888,
+        "tp": 20794,
+        "fp": 150547,
+        "fn": 1651,
+        "tn": 678896,
+        "scenes": 128,
+        "independent_units": 128,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.1872005964955405,
+          0.24111880260975022
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.0854437763353559,
+          0.12371528545290125
+        ],
+        "combined": [
+          0.004785322685546267,
+          0.03229740172268648
+        ],
+        "pixel_raw": [
+          0.8325661015349778,
+          0.8692056661091037
+        ],
+        "pixel_combined": [
+          0.6664407916123459,
+          0.7229448171619803
+        ]
+      }
+    },
+    "simulation_ood": {
+      "trace": {
+        "f1": 0.5907120743034056,
+        "iou": 0.4191564147627416,
+        "precision": 0.46094379127073604,
+        "recall": 0.8221775351910371,
+        "brier": 0.02411455102264881,
+        "ece": 0.03285174982005522,
+        "false_positive_rate": 0.02710933640037906,
+        "pixels": 380832,
+        "tp": 8586,
+        "fp": 10041,
+        "fn": 1857,
+        "tn": 360348,
+        "scenes": 64,
+        "independent_units": 64,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.4990275506571685,
+          0.6717331176019463
+        ],
+        "error_indicator_brier": 0.024733655154705048,
+        "error_indicator_ece": 0.002267567724466536,
+        "observed_pixel_error_rate": 0.031242122510713385,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.031242122510713385,
+            "entropy_risk": 0.031242122510713385,
+            "random_expected_risk": 0.031242122510713385
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0023877545304316163,
+            "entropy_risk": 0.0022792202335938155,
+            "random_expected_risk": 0.031242122510713385
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0007194773548441307,
+            "entropy_risk": 0.0016437694311402403,
+            "random_expected_risk": 0.031242122510713385
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.000787748928661457,
+            "entropy_risk": 0.0016070078144693723,
+            "random_expected_risk": 0.031242122510713385
+          }
+        ],
+        "latency_ms_p50_p95": [
+          227.5740000040969,
+          640.147727594012
+        ]
+      },
+      "raw": {
+        "f1": 0.2812196469042223,
+        "iou": 0.1636158142008687,
+        "precision": 0.17551825789273487,
+        "recall": 0.7069807526572824,
+        "brier": 0.0590311624109745,
+        "ece": 0.0720458625220568,
+        "false_positive_rate": 0.09363399021029242,
+        "pixels": 380832,
+        "tp": 7383,
+        "fp": 34681,
+        "fn": 3060,
+        "tn": 335708,
+        "scenes": 64,
+        "independent_units": 64,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.20655526048956774,
+          0.3692446120670458
+        ],
+        "error_indicator_brier": 0.05745156481862068,
+        "error_indicator_ece": 0.056259223338307296,
+        "observed_pixel_error_rate": 0.0991014410553735,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0991014410553735,
+            "entropy_risk": 0.0991014410553735,
+            "random_expected_risk": 0.0991014410553735
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.004582948211634877,
+            "entropy_risk": 0.0045969526370333025,
+            "random_expected_risk": 0.0991014410553735
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0014862196454079489,
+            "entropy_risk": 0.0014862196454079489,
+            "random_expected_risk": 0.0991014410553735
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.00040962944290395765,
+            "entropy_risk": 0.00040962944290395765,
+            "random_expected_risk": 0.0991014410553735
+          }
+        ],
+        "latency_ms_p50_p95": [
+          127.81975000689272,
+          312.3247187540982
+        ]
+      },
+      "combined": {
+        "f1": 0.619144430326133,
+        "iou": 0.4483774001594994,
+        "precision": 0.5550998708893445,
+        "recall": 0.699894666283635,
+        "brier": 0.01950494386255741,
+        "ece": 0.01761381017972039,
+        "false_positive_rate": 0.01581580446503541,
+        "pixels": 380832,
+        "tp": 7309,
+        "fp": 5858,
+        "fn": 3134,
+        "tn": 364531,
+        "scenes": 64,
+        "independent_units": 64,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.5036188109121679,
+          0.7179404256416911
+        ],
+        "error_indicator_brier": 0.019092867150902748,
+        "error_indicator_ece": 0.013454198810272232,
+        "observed_pixel_error_rate": 0.023611461221746073,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.023611461221746073,
+            "entropy_risk": 0.023611461221746073,
+            "random_expected_risk": 0.023611461221746073
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.002923423801921407,
+            "entropy_risk": 0.004075287790941937,
+            "random_expected_risk": 0.023611461221746073
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0021006638097638853,
+            "entropy_risk": 0.003256028905134022,
+            "random_expected_risk": 0.023611461221746073
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0022162003193008993,
+            "entropy_risk": 0.0037706915385261742,
+            "random_expected_risk": 0.023611461221746073
+          }
+        ],
+        "latency_ms_p50_p95": [
+          116.90672949771397,
+          436.818248245981
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.05457833478777428,
+        "iou": 0.028054758391837045,
+        "precision": 0.028059383623287505,
+        "recall": 0.9941587666379393,
+        "brier": 0.3807145059108734,
+        "ece": 0.5817095782803746,
+        "false_positive_rate": 0.9709224626001313,
+        "pixels": 380832,
+        "tp": 10382,
+        "fp": 359619,
+        "fn": 61,
+        "tn": 10770,
+        "scenes": 64,
+        "independent_units": 64,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.04324489992086149,
+          0.06699276856720217
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.11590808578493968,
+        "iou": 0.06151933719923035,
+        "precision": 0.061986169036229666,
+        "recall": 0.8909317246002106,
+        "brier": 0.17545412480831146,
+        "ece": 0.37552748286999427,
+        "false_positive_rate": 0.38012467972860964,
+        "pixels": 380832,
+        "tp": 9304,
+        "fp": 140794,
+        "fn": 1139,
+        "tn": 229595,
+        "scenes": 64,
+        "independent_units": 64,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.08942669653884783,
+          0.14542185677604313
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.24775442578758,
+          0.35945403349617894
+        ],
+        "combined": [
+          -0.09247776263974881,
+          0.0363228801463318
+        ],
+        "pixel_raw": [
+          0.4530184403923842,
+          0.6128448739092621
+        ],
+        "pixel_combined": [
+          0.39963303770734554,
+          0.5459139526879289
+        ]
+      }
+    },
+    "nuisance_lighting": {
+      "trace": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 1.5858165625104448e-07,
+        "ece": 8.561518916394562e-05,
+        "false_positive_rate": 0.0,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 236672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 1.5224365768062853e-07,
+        "error_indicator_ece": 5.4848893341841176e-05,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          101.2312294988078,
+          229.60485610892647
+        ]
+      },
+      "raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 4.4655607212007453e-07,
+        "ece": 0.0004052675503771752,
+        "false_positive_rate": 0.0,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 236672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 1.1530541996762622e-06,
+        "error_indicator_ece": 0.0008595039835199714,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          66.50118800462224,
+          162.32051250044606
+        ]
+      },
+      "combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 1.5999006791389547e-05,
+        "ece": 0.000197496992981091,
+        "false_positive_rate": 2.9576798269334775e-05,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 7,
+        "fn": 0,
+        "tn": 236665,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 1.5656014511478133e-05,
+        "error_indicator_ece": 0.0002071997167604914,
+        "observed_pixel_error_rate": 2.9576798269334775e-05,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 2.9576798269334775e-05,
+            "entropy_risk": 2.9576798269334775e-05,
+            "random_expected_risk": 2.9576798269334775e-05
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 2.9576798269334775e-05
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 2.9576798269334775e-05
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 2.9576798269334775e-05
+          }
+        ],
+        "latency_ms_p50_p95": [
+          67.05722899641842,
+          106.56149999631452
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.27090024948120117,
+        "ece": 0.5136069416440218,
+        "false_positive_rate": 0.942494253650622,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 223062,
+        "fn": 0,
+        "tn": 13610,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.11359822750091553,
+        "ece": 0.31875054169504907,
+        "false_positive_rate": 0.1593006354786371,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 37702,
+        "fn": 0,
+        "tn": 198970,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "combined": [
+          0.0,
+          0.0
+        ],
+        "pixel_raw": [
+          0.0,
+          0.0
+        ],
+        "pixel_combined": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "nuisance_camera": {
+      "trace": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 1.2889234568547181e-08,
+        "ece": 4.976177297066897e-05,
+        "false_positive_rate": 0.0,
+        "pixels": 211976,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 211976,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 6.526169613607635e-07,
+        "error_indicator_ece": 0.0001085370677174069,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          81.71770850458415,
+          197.31594115582993
+        ]
+      },
+      "raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 6.845661846455187e-05,
+        "ece": 0.0005670295475066158,
+        "false_positive_rate": 0.00012737291014077066,
+        "pixels": 211976,
+        "tp": 0,
+        "fp": 27,
+        "fn": 0,
+        "tn": 211949,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 6.89952212269418e-05,
+        "error_indicator_ece": 0.0009721245216191129,
+        "observed_pixel_error_rate": 0.00012737291014077066,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.00012737291014077066,
+            "entropy_risk": 0.00012737291014077066,
+            "random_expected_risk": 0.00012737291014077066
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.00012737291014077066
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.00012737291014077066
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.00012737291014077066
+          }
+        ],
+        "latency_ms_p50_p95": [
+          49.22114600049099,
+          75.31908124292386
+        ]
+      },
+      "combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 1.4964244954285277e-08,
+        "ece": 0.00010718712292145938,
+        "false_positive_rate": 0.0,
+        "pixels": 211976,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 211976,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 2.1929048799051998e-08,
+        "error_indicator_ece": 0.00013338768621906638,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          51.27583299326943,
+          69.57072950099246
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.16578632593154907,
+        "ece": 0.3932279001903279,
+        "false_positive_rate": 0.252519153111673,
+        "pixels": 211976,
+        "tp": 0,
+        "fp": 53528,
+        "fn": 0,
+        "tn": 158448,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.006287418771535158,
+        "ece": 0.0714286172284462,
+        "false_positive_rate": 0.0,
+        "pixels": 211976,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 211976,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "combined": [
+          0.0,
+          0.0
+        ],
+        "pixel_raw": [
+          0.0,
+          0.0
+        ],
+        "pixel_combined": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "nuisance_blur": {
+      "trace": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 9.024333849083632e-07,
+        "ece": 5.287764231793293e-05,
+        "false_positive_rate": 0.0,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 236672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 1.1110264495073352e-06,
+        "error_indicator_ece": 3.1254484462697046e-05,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          81.36833299795398,
+          100.30748559875065
+        ]
+      },
+      "raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 1.7958420528429997e-07,
+        "ece": 0.000378643861040473,
+        "false_positive_rate": 0.0,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 236672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 7.878905421421223e-07,
+        "error_indicator_ece": 0.0008318586624227464,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          48.40612450061599,
+          68.88047310494585
+        ]
+      },
+      "combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 3.906851375745646e-08,
+        "ece": 0.00013705510355066508,
+        "false_positive_rate": 0.0,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 236672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ],
+        "error_indicator_brier": 4.810747356032152e-08,
+        "error_indicator_ece": 0.00016497292381245643,
+        "observed_pixel_error_rate": 0.0,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.0,
+            "entropy_risk": 0.0,
+            "random_expected_risk": 0.0
+          }
+        ],
+        "latency_ms_p50_p95": [
+          47.81399999774294,
+          67.72118764711195
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.16407634317874908,
+        "ece": 0.4039704689472458,
+        "false_positive_rate": 0.192194260411033,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 45487,
+        "fn": 0,
+        "tn": 191185,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.0,
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "brier": 0.09607443958520889,
+        "ece": 0.3015147445853996,
+        "false_positive_rate": 0.10140616549486209,
+        "pixels": 236672,
+        "tp": 0,
+        "fp": 24000,
+        "fn": 0,
+        "tn": 212672,
+        "scenes": 32,
+        "independent_units": 32,
+        "bootstrap_unit": "scene",
+        "bootstrap_f1_ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.0,
+          0.0
+        ],
+        "combined": [
+          0.0,
+          0.0
+        ],
+        "pixel_raw": [
+          0.0,
+          0.0
+        ],
+        "pixel_combined": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "pcd_custom_test": {
+      "trace": {
+        "f1": 0.7628326320390548,
+        "iou": 0.6165961468061739,
+        "precision": 0.6897517213793891,
+        "recall": 0.8532350030630036,
+        "brier": 0.10819875448942184,
+        "ece": 0.04630179518995314,
+        "false_positive_rate": 0.1544255674169021,
+        "pixels": 591680,
+        "tp": 144852,
+        "fp": 65154,
+        "fn": 24916,
+        "tn": 356758,
+        "scenes": 80,
+        "independent_units": 20,
+        "bootstrap_unit": "panorama",
+        "bootstrap_f1_ci95": [
+          0.7031940640197191,
+          0.809786889920719
+        ],
+        "error_indicator_brier": 0.1076728105545044,
+        "error_indicator_ece": 0.026318904672275364,
+        "observed_pixel_error_rate": 0.15222755543537048,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.15222755543537048,
+            "entropy_risk": 0.15222755543537048,
+            "random_expected_risk": 0.15222755543537048
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.07688164773751577,
+            "entropy_risk": 0.08020551649540292,
+            "random_expected_risk": 0.15222755543537048
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.02616279069767442,
+            "entropy_risk": 0.027724445646295295,
+            "random_expected_risk": 0.15222755543537048
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.004847214710654408,
+            "entropy_risk": 0.006990265008112493,
+            "random_expected_risk": 0.15222755543537048
+          }
+        ],
+        "latency_ms_p50_p95": [
+          101.28591649845475,
+          211.57857920552485
+        ]
+      },
+      "raw": {
+        "f1": 0.7284367784314026,
+        "iou": 0.5728671339933887,
+        "precision": 0.644163640808787,
+        "recall": 0.8380790254936148,
+        "brier": 0.11792565137147903,
+        "ece": 0.027871684166738783,
+        "false_positive_rate": 0.18628292155710197,
+        "pixels": 591680,
+        "tp": 142279,
+        "fp": 78595,
+        "fn": 27489,
+        "tn": 343317,
+        "scenes": 80,
+        "independent_units": 20,
+        "bootstrap_unit": "panorama",
+        "bootstrap_f1_ci95": [
+          0.6739908219401428,
+          0.7753113614533629
+        ],
+        "error_indicator_brier": 0.11981420964002609,
+        "error_indicator_ece": 0.02472186779313174,
+        "observed_pixel_error_rate": 0.17929286100594916,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.17929286100594916,
+            "entropy_risk": 0.17929286100594916,
+            "random_expected_risk": 0.17929286100594916
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.09368126915449793,
+            "entropy_risk": 0.09475617450874346,
+            "random_expected_risk": 0.17929286100594916
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.03681719848566793,
+            "entropy_risk": 0.04025486749594375,
+            "random_expected_risk": 0.17929286100594916
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.013987290427257977,
+            "entropy_risk": 0.014284748512709573,
+            "random_expected_risk": 0.17929286100594916
+          }
+        ],
+        "latency_ms_p50_p95": [
+          65.51831249817042,
+          151.8156413447285
+        ]
+      },
+      "combined": {
+        "f1": 0.7558417436090051,
+        "iou": 0.6075125408897105,
+        "precision": 0.6709600215581224,
+        "recall": 0.8653103058291315,
+        "brier": 0.1092754453420639,
+        "ece": 0.04144629954472245,
+        "false_positive_rate": 0.1707488765429758,
+        "pixels": 591680,
+        "tp": 146902,
+        "fp": 72041,
+        "fn": 22866,
+        "tn": 349871,
+        "scenes": 80,
+        "independent_units": 20,
+        "bootstrap_unit": "panorama",
+        "bootstrap_f1_ci95": [
+          0.7039695940948736,
+          0.7989622898086185
+        ],
+        "error_indicator_brier": 0.10896007716655731,
+        "error_indicator_ece": 0.017698604888749258,
+        "observed_pixel_error_rate": 0.1604025824770146,
+        "selective_risk": [
+          {
+            "coverage": 1.0,
+            "learned_error_risk": 0.1604025824770146,
+            "entropy_risk": 0.1604025824770146,
+            "random_expected_risk": 0.1604025824770146
+          },
+          {
+            "coverage": 0.75,
+            "learned_error_risk": 0.07986524247340905,
+            "entropy_risk": 0.08217279610600324,
+            "random_expected_risk": 0.1604025824770146
+          },
+          {
+            "coverage": 0.5,
+            "learned_error_risk": 0.027241076257436454,
+            "entropy_risk": 0.0305874797187669,
+            "random_expected_risk": 0.1604025824770146
+          },
+          {
+            "coverage": 0.25,
+            "learned_error_risk": 0.00805840995132504,
+            "entropy_risk": 0.008071930773391023,
+            "random_expected_risk": 0.1604025824770146
+          }
+        ],
+        "latency_ms_p50_p95": [
+          66.1630209942814,
+          165.05932289364858
+        ]
+      },
+      "pixel_raw": {
+        "f1": 0.43612464923940336,
+        "iou": 0.27887430352252335,
+        "precision": 0.28399287622439895,
+        "recall": 0.9392936242401395,
+        "brier": 0.3336656093597412,
+        "ece": 0.2924356693525589,
+        "false_positive_rate": 0.9528953905079732,
+        "pixels": 591680,
+        "tp": 159462,
+        "fp": 402038,
+        "fn": 10306,
+        "tn": 19874,
+        "scenes": 80,
+        "independent_units": 20,
+        "bootstrap_unit": "panorama",
+        "bootstrap_f1_ci95": [
+          0.38566845491050666,
+          0.48112952790387636
+        ]
+      },
+      "pixel_combined": {
+        "f1": 0.43586662865366077,
+        "iou": 0.2786633394813931,
+        "precision": 0.3061281894809108,
+        "recall": 0.7564558691861835,
+        "brier": 0.2662630081176758,
+        "ece": 0.20967819320658507,
+        "false_positive_rate": 0.6899116403420619,
+        "pixels": 591680,
+        "tp": 128422,
+        "fp": 291082,
+        "fn": 41346,
+        "tn": 130830,
+        "scenes": 80,
+        "independent_units": 20,
+        "bootstrap_unit": "panorama",
+        "bootstrap_f1_ci95": [
+          0.39246311221817387,
+          0.46950901412566476
+        ]
+      },
+      "paired_trace_minus_baseline_f1_ci95": {
+        "raw": [
+          0.006885104737255771,
+          0.06263223108490565
+        ],
+        "combined": [
+          -0.0064099528075444836,
+          0.017557828279468998
+        ],
+        "pixel_raw": [
+          0.29281145084005783,
+          0.35720536181226337
+        ],
+        "pixel_combined": [
+          0.2927741953914132,
+          0.35647951838704106
+        ]
+      }
+    }
+  }
+}

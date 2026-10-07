@@ -1,0 +1,29 @@
+{
+  "source_sha256": {
+    "__init__.py": "fc057abd28afb0d9da8409f4da4cd23ef901399de7773b0693f67a93efd443f7",
+    "api.py": "07b5e509a02354c6e3507c8f2f7c7c22c0ae12c43a28daacbd59b30b943566ca",
+    "cli.py": "7579536f513060bd9c39f5c6d012b7bd2099e78114e772e457faa5f3879d6bea",
+    "data.py": "102c6a329aaa95afbc893b136e407a82a66d533f9233e993b6403c6c8b9e7d6b",
+    "evaluate.py": "68f4f0574052ec37a176bc1cc1d508bcba5fa320f180bc923a192ee9d89c82e7",
+    "inference.py": "f5ec9e505a58dafa0a951c2d3645090259f2e42c3e3b8cd698ca88d9e5cd08c3",
+    "interventions.py": "d076987ce49e79879895c71ab17e7bb405ed0bb3d4fd23c209c06726e2898a55",
+    "metrics.py": "a96f1bef3c74bc4c8d969849aa646ef2cffb3620e2b2bcc21a9dbaea3c82df36",
+    "model.py": "9e89c9c5b2ecae702dcf80a353c81c31238adb5e94de5a0f324c7114a381eade",
+    "policy.py": "6bd9f366a4c1fd036954c040d785bf2d9c35bd1baf3cc2c0367af7dd8d87ea57",
+    "simulator.py": "8fc4f500bf27f9f2964ce9fd9a4b79c680b477e95f6f05ab76d258161ad6564b",
+    "train.py": "cf20491196082bce29bfc8b86d51b4e4ae16bc6ad32b6e076f6071f4d7fdc3fe"
+  },
+  "python": "3.12.7",
+  "torch": "2.13.0",
+  "numpy": "1.26.4",
+  "device": "mps",
+  "train_samples": 752,
+  "validation_samples": 176,
+  "test_used_for_selection": false,
+  "elapsed_seconds": 859.3978928330034,
+  "checkpoint_sha256": "5a3320babe5b5644d1e54a8be48e3a0f84e6450832bb3f86b9b3b8f037e4f899",
+  "source_manifest_timing": "Files on disk at completion; the running trainer used the preserved materialization implementation.",
+  "executed_trainer_file": "training-source/train.py",
+  "executed_trainer_sha256": "60cccb820fa7086f01048992a3d9f1800c7f79ce56836f6ddd2e7cf82a83cdc5",
+  "runtime_source_note": "Only subsequent memory-saving materialization changes differ from the preserved trainer. Architecture, data, objective, optimizer, seed, epochs and calibration were unchanged."
+}

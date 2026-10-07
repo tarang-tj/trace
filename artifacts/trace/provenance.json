@@ -1,0 +1,25 @@
+{
+  "source_sha256": {
+    "__init__.py": "fc057abd28afb0d9da8409f4da4cd23ef901399de7773b0693f67a93efd443f7",
+    "api.py": "eae7e8dabe1d0cca9e64743cf720654e4cf61bc5e5f1882b25212d99e8ea1d3b",
+    "cli.py": "b9457dee142192647d6def642af23c85f2993dc8ebb73624928bf00cd5928c50",
+    "data.py": "364cb0a125a8aa6432eaceb0a825640027e8e62d4e153894fb5c82c395f93094",
+    "evaluate.py": "1a44c6c9cf3110b4900ca67dab7a3ce8848d750338ed3f29c2d660b48d460a01",
+    "inference.py": "4571989eb396e5b8f3281d119648cc7f45afc03ee0fc783cd2383861a59a43d8",
+    "interventions.py": "d076987ce49e79879895c71ab17e7bb405ed0bb3d4fd23c209c06726e2898a55",
+    "metrics.py": "f5e9cb3899f11616081bcbd479e10f45ef754b786910d2a2db587d9bd1ac39ac",
+    "model.py": "9e89c9c5b2ecae702dcf80a353c81c31238adb5e94de5a0f324c7114a381eade",
+    "policy.py": "5937bbc24d887d811a48872ee445c2486516e8024b12d124d81471a679077035",
+    "simulator.py": "98182ef2a85d1b1b0b0a0d4bae093c57862d4ffd3e8719130c704c8b94619d83",
+    "train.py": "d8d800509546aa9e360f14d4d89f8799a79d6e3e16be00e5af6812fe69ea3bd4"
+  },
+  "python": "3.12.7",
+  "torch": "2.13.0",
+  "numpy": "1.26.4",
+  "device": "mps",
+  "train_samples": 752,
+  "validation_samples": 176,
+  "test_used_for_selection": false,
+  "elapsed_seconds": 413.43933587499487,
+  "checkpoint_sha256": "876e12fcbeeae681ad8a48f79ee8cf9ccdc30877411c51bd0074cbd4a0946707"
+}

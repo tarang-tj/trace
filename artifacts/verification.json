@@ -1,0 +1,53 @@
+{
+  "trace": {
+    "sha256": "876e12fcbeeae681ad8a48f79ee8cf9ccdc30877411c51bd0074cbd4a0946707",
+    "epochs": 10,
+    "panorama_split": [
+      60,
+      20,
+      20
+    ]
+  },
+  "raw": {
+    "sha256": "17973b466c9c1d423c2dae43f46b0da9c93b27fd610126d4b7b217358126f2cb",
+    "epochs": 10,
+    "panorama_split": [
+      60,
+      20,
+      20
+    ]
+  },
+  "combined": {
+    "sha256": "5a3320babe5b5644d1e54a8be48e3a0f84e6450832bb3f86b9b3b8f037e4f899",
+    "epochs": 10,
+    "panorama_split": [
+      60,
+      20,
+      20
+    ]
+  },
+  "policy": {
+    "sha256": "07e4da63deaf242e374a3fb3b796d67dc74e2a7c08bb3112b6817879bffc12ef",
+    "test_scenes": 128
+  },
+  "browser": {
+    "desktop": [
+      1505,
+      1045
+    ],
+    "mobile": [
+      390,
+      844
+    ],
+    "errors": [],
+    "copy_diff_passed": true,
+    "research": "six frozen detector suites and seven action strategies verified"
+  },
+  "figures": {
+    "layout_issues": {
+      "learning": [],
+      "detectors": [],
+      "policy": []
+    }
+  }
+}

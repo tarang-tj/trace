@@ -1,0 +1,112 @@
+{
+  "figure_contracts": {
+    "learning": {
+      "claim": "Validation learning trajectories and checkpoint selection are visible.",
+      "evidence": "Recorded epoch histories; one training seed, no interval.",
+      "layout": "single quantitative axis",
+      "backend": "Matplotlib",
+      "export": "7.2 x 3.2 inches; editable SVG and 300 DPI PNG",
+      "choice": "Line plot because epochs are ordered; alternative is epoch points."
+    },
+    "detectors": {
+      "claim": "The benefit of pooling depends on the evaluation domain.",
+      "evidence": "Frozen-checkpoint pooled F1 and 95% percentile intervals from 1000 scene/panorama bootstrap replicates.",
+      "layout": "three quantitative facets",
+      "backend": "Matplotlib",
+      "export": "7.2 x 3.4 inches; editable SVG and 300 DPI PNG",
+      "choice": "Point/interval plot exposes estimation uncertainty; alternatives: paired difference plot or numeric table."
+    },
+    "policy": {
+      "claim": "Average policy value can conceal harmful individual follow-ups.",
+      "evidence": "Scene-level gains from three actual simulator acquisitions; points retain every observation, diamond means, box IQR, whiskers 1.5 IQR.",
+      "layout": "single quantitative axis",
+      "backend": "Matplotlib",
+      "export": "7.2 x 3.7 inches; editable SVG and 300 DPI PNG",
+      "choice": "Box/strip plot preserves dispersion; alternatives: gain histogram or empirical CDF."
+    }
+  },
+  "data_profile": {
+    "learning": {
+      "trace": {
+        "epochs": 10,
+        "missing": 0,
+        "f1_range": [
+          0.4034520880139795,
+          0.774724167300578
+        ]
+      },
+      "raw": {
+        "epochs": 10,
+        "missing": 0,
+        "f1_range": [
+          0.6467370551836772,
+          0.7403275917108416
+        ]
+      },
+      "combined": {
+        "epochs": 10,
+        "missing": 0,
+        "f1_range": [
+          0.5780691971783675,
+          0.7724638224736404
+        ]
+      }
+    },
+    "detectors": {
+      "simulation_mixed": {
+        "models": 5,
+        "independent_units": 128,
+        "resampling_unit": "scene",
+        "f1_range": [
+          0.057458134706312294,
+          0.9092520221757703
+        ],
+        "missing": 0
+      },
+      "simulation_ood": {
+        "models": 5,
+        "independent_units": 64,
+        "resampling_unit": "scene",
+        "f1_range": [
+          0.05457833478777428,
+          0.619144430326133
+        ],
+        "missing": 0
+      },
+      "pcd_custom_test": {
+        "models": 5,
+        "independent_units": 20,
+        "resampling_unit": "panorama",
+        "f1_range": [
+          0.43586662865366077,
+          0.7628326320390548
+        ],
+        "missing": 0
+      }
+    },
+    "policy": {
+      "scenes": 128,
+      "actions_per_scene": 3,
+      "missing": 0,
+      "measured_gain_range": [
+        -0.004154633730649948,
+        0.007720617577433586
+      ],
+      "negative_action_fraction": 0.3125,
+      "strategy_means": {
+        "Learned": 0.0005685651558451355,
+        "Abstain": 0.0005685650976374745,
+        "Uniform expected": 0.00034019682789221406,
+        "Fixed (validation)": 0.0006103028426878154,
+        "Quality heuristic": 0.0007122574606910348,
+        "Passive": 0.0,
+        "Oracle": 0.000991768785752356
+      }
+    }
+  },
+  "layout": {
+    "learning": [],
+    "detectors": [],
+    "policy": []
+  }
+}

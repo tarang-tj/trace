@@ -1,0 +1,66 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  contracts-and-studio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Python dependencies
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]'
+      - name: Check Python source
+        run: ruff check src scripts tests --select F,I,E9
+      - name: Train procedural-only smoke detector and policy
+        run: |
+          python -m tracecv.train --epochs 1 --sim-train 16 --sim-validation 8 --real-data '' --device cpu --output artifacts/trace
+          python -m tracecv.policy --model artifacts/trace --train 8 --validation 4 --test 8 --epochs 2
+      - name: Run Python contracts and trained-model integration checks
+        run: pytest -q
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Build studio
+        run: |
+          npm ci
+          npm run build
+        working-directory: web
+      - name: Install browser
+        run: npx playwright install --with-deps chromium
+        working-directory: web
+      - name: Verify working studio
+        env:
+          TRACE_EXPECT_RESEARCH: '1'
+          TRACE_QA_OUTPUT: ${{ runner.temp }}/trace-browser
+        run: |
+          tracecv serve --model artifacts/trace --port 8765 > "$RUNNER_TEMP/trace-server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in {1..60}; do
+            if curl --fail --silent http://127.0.0.1:8765/api/health > /dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          curl --fail --silent http://127.0.0.1:8765/api/health
+          cd web
+          node qa.mjs
+      - name: Preserve smoke verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: studio-smoke-evidence
+          path: |
+            ${{ runner.temp }}/trace-browser/
+            ${{ runner.temp }}/trace-server.log

@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite TRACE when referring to this research artifact. Citation does not grant reuse rights."
+type: software
+title: "TRACE: Tested Re-observation and Acquisition-aware Change Evidence"
+authors:
+  - family-names: Jammalamadaka
+    given-names: Tarang
+version: 1.0.0
+date-released: 2026-10-07
+url: "https://github.com/tarang-tj/trace"
+repository-code: "https://github.com/tarang-tj/trace"
+abstract: "A computer-vision research artifact for calibrated change evidence and simulator-trained follow-up acquisition, including archived experiments, a local API, and an interactive studio."

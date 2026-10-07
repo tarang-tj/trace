@@ -1,0 +1,13 @@
+[
+  "TRACE", "Inspect", "Research", "Local model",
+  "Look again. Know what changed.",
+  "Compare a reference with an observation, then choose the next best look.",
+  "Scene", "Moved component", "New scene", "Run inspection",
+  "Reference", "Observation", "Change probability", "Uncertainty",
+  "Upload your pair", "Reference image", "Observation image",
+  "Evidence", "Changed area", "-", "Verification", "-",
+  "Run an inspection to view the model evidence.",
+  "Next best look", "1", "Relight", "2", "Re-register", "3", "Inspect closely",
+  "Recommendations appear after inspection.", "Export evidence",
+  "Simulated scenes. Validate on captured image pairs before deployment."
+]

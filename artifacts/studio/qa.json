@@ -1,0 +1,65 @@
+{
+  "viewport": [
+    1505,
+    1045
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "errors": [],
+  "changed": "5.1%",
+  "reobservation": "acquired a simulated follow-up and updated inference",
+  "research": "six frozen detector suites and seven action strategies verified",
+  "uploadedPair": "passed",
+  "exportedCheckpoint": "876e12fcbeeae681ad8a48f79ee8cf9ccdc30877411c51bd0074cbd4a0946707",
+  "initialCopy": "TRACE\nInspect\nResearch\nLocal model\nLook again. Know what changed.\n\nCompare a reference with an observation, then choose the next best look.\n\nScene\nMoved component\nRemoved component\nAdded component\nLighting only\nCamera shift only\nBlur only\nMixed conditions\nUnchanged scene\nNew scene\nRun inspection\nReference\nObservation\nChange probability\nUncertainty\nUpload your pair\nReference image\nObservation image\nEvidence\nChanged area\n-\nVerification\n-\n\nRun an inspection to view the model evidence.\n\nNext best look\n1\nRelight\n2\nRe-register\n3\nInspect closely\n\nRecommendations appear after inspection.\n\nExport evidence\nSimulated scenes. Validate on captured image pairs before deployment.",
+  "typography": {
+    "h1": {
+      "size": "48px",
+      "family": "\"Times New Roman\", Georgia, serif",
+      "lineHeight": "50.4px",
+      "weight": "400"
+    },
+    "header button": {
+      "size": "14px",
+      "family": "Arial, Helvetica, sans-serif",
+      "lineHeight": "normal",
+      "weight": "400"
+    },
+    ".toolbar button": {
+      "size": "14px",
+      "family": "Arial, Helvetica, sans-serif",
+      "lineHeight": "normal",
+      "weight": "400"
+    },
+    ".evidence h2": {
+      "size": "28px",
+      "family": "\"Times New Roman\", Georgia, serif",
+      "lineHeight": "33.6px",
+      "weight": "400"
+    },
+    ".upload-panel input": {
+      "size": "14px",
+      "family": "Arial, Helvetica, sans-serif",
+      "lineHeight": "normal",
+      "weight": "400"
+    }
+  },
+  "aboveFoldCopyDiff": {
+    "passed": true,
+    "added": [],
+    "removed": [],
+    "renamed": [],
+    "reordered": false,
+    "closedSelectOptions": [
+      "Removed component",
+      "Added component",
+      "Lighting only",
+      "Camera shift only",
+      "Blur only",
+      "Mixed conditions",
+      "Unchanged scene"
+    ]
+  }
+}

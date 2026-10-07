@@ -1,0 +1,6 @@
+* text=auto
+*.png binary
+*.npz binary
+# Matplotlib-generated SVG paths contain intentional trailing spaces.
+*.svg text whitespace=-blank-at-eol
+*.csv text whitespace=cr-at-eol

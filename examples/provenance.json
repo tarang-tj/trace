@@ -1,0 +1,21 @@
+{
+  "source": "Original procedural renderer",
+  "examples": [
+    {
+      "id": "moved",
+      "seed": 8000000,
+      "label": "moved-label.png"
+    },
+    {
+      "id": "lighting",
+      "seed": 8000001,
+      "label": "lighting-label.png"
+    },
+    {
+      "id": "removed",
+      "seed": 8000002,
+      "label": "removed-label.png"
+    }
+  ],
+  "usage": "Demonstration only; these seeds are outside training, validation and test experiments."
+}

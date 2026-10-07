@@ -1,0 +1,11 @@
+# Exact versions used for the local research run. Python 3.12.7; Apple MPS training, CPU inference.
+torch==2.13.0
+numpy==1.26.4
+scipy==1.13.1
+Pillow==10.4.0
+fastapi==0.135.2
+uvicorn==0.42.0
+python-multipart==0.0.22
+httpx==0.28.1
+pytest==9.0.3
+matplotlib==3.9.2
